@@ -1,12 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ops.h                                              :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fpinheir <fpinheir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/05 16:40:07 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/05 17:10:31 by fmartins         ###   ########.fr       */
+/*   Created: 2026/05/19 19:45:20 by fpinheir          #+#    #+#             */
+/*   Updated: 2026/05/19 19:58:29 by fpinheir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	(*del)(lst->content);
+	free(lst);
+}
