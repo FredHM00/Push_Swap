@@ -10,3 +10,32 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "stack.h"
+
+t_list	**stack_init(void *arr, size_t size)
+{
+	t_list	**stack;
+	t_list	*head;
+	t_list	*buff;
+
+	head = NULL;
+	stack = ft_calloc(1, sizeof (t_list **));
+	if (!stack)
+	{
+		free(stack);
+		return (NULL);
+	}
+	stack = &head;
+	while (size--)
+	{
+		buff = ft_lstnew(arr++);
+		if (!buff)
+		{
+			ft_lstdelone(buff, free);
+			ft_lstclear(&head, free);
+			return (NULL);
+		}
+		ft_lstadd_back(stack, buff);
+	}
+	return (stack);
+}

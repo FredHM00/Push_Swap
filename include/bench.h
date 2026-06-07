@@ -10,3 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef BENCH_H
+# define BENCH_H
+# include "libft.h"
+# include <float.h>
+
+float	compute_disorder(t_list	*list);
+
+#endif
