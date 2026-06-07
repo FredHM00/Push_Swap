@@ -3,7 +3,7 @@ NAME=libft.a
 INC_PATH=../include
 
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -I $(INC_PATH)
+CFLAGS=-Wall -Wextra -Werror -I$(INC_PATH)
 
 SRC_PATH=.
 _SRC=	ft_bzero.c \

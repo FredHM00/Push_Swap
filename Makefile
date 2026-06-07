@@ -7,7 +7,7 @@ _LIB=libft.a
 LIB=libft/libft.a
 
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -L$(LIB_PATH) -l:$(_LIB) -I$(INC_PATH)
+CFLAGS=-Wall -Wextra -Werror -I$(INC_PATH)
 
 
 ALG_PATH=algorithms
@@ -46,8 +46,8 @@ OBJ=$(SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(LIB) main.o
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+$(NAME): $(OBJ) $(LIB) main.c
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) main.c -L$(LIB_PATH) -l:$(_LIB) 
 
 $(LIB):
 	make -C $(LIB_PATH)
