@@ -6,25 +6,25 @@
 /*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 15:30:47 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/08 19:02:46 by fmartins         ###   ########.fr       */
+/*   Updated: 2026/06/08 20:23:58 by fmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "include/push_swap.h"
 
-static void	error(void)
+void	error(void)
 {
 	ft_putendl_fd("Error", 1);
 }
 
-static int	check_int(long num)
+int	check_int(long num)
 {
 	if (num > INT_MAX || num < INT_MIN)
 		return (0);
 	return (1);
 }
 
-static int	check_str(const char *str)
+int	check_str(const char *str)
 {
 	int		sign;
 	int		num;
