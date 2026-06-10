@@ -6,15 +6,16 @@
 /*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 15:30:47 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/08 20:23:58 by fmartins         ###   ########.fr       */
+/*   Updated: 2026/06/10 19:50:18 by fmartins         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/push_swap.h"
 
-void	error(void)
+int	error(void)
 {
-	ft_putendl_fd("Error", 1);
+	ft_putendl_fd("Error", 2);
+	return (0);
 }
 
 int	check_int(long num)
@@ -52,18 +53,15 @@ int	check_str(const char *str)
 	return (0);
 }
 
-int	is_valid_number(int ac, char **av)
+int	is_valid_number(int ac, char **av, t_config config)
 {
 	int	i;
 
-	i = 1;
+	i = config.first_arg;
 	while (i < ac)
 	{
 		if (!check_str(av[i]))
-		{
-			error();
-			return (0);
-		}
+			return (error());
 		i++;
 	}
 	return (1);
