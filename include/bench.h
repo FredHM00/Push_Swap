@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   bench.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:04 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/10 18:58:41 by fmartins         ###   ########.fr       */
+/*   Updated: 2026/06/15 18:39:28 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,5 @@ typedef struct s_config
 	int			bench;
 	int			first_arg;
 }t_config;
-
 
 #endif

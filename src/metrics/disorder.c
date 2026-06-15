@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   disorder.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:51 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/05 16:40:52 by fmartins         ###   ########.fr       */
+/*   Updated: 2026/06/15 16:20:54 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,3 @@ float	compute_disorder(t_list	*list)
 	}
 	return (mistakes / total_pairs);
 }
-

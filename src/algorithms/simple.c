@@ -3,10 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   simple.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:39 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/05 16:40:40 by fmartins         ###   ########.fr       */
+/*   Updated: 2026/06/15 18:38:53 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "algo.h"
+
+void	simple_sort(t_list **a, t_list **b, int *moves)
+{
+}
