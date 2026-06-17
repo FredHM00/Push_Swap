@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fpinheir <fpinheir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 18:11:00 by fpinheir          #+#    #+#             */
-/*   Updated: 2026/05/19 18:56:46 by fpinheir         ###   ########.fr       */
+/*   Updated: 2026/06/17 16:23:36 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,16 @@ t_list	*ft_lstnew(void *content)
 	new = ft_calloc(1, sizeof (t_list));
 	new->content = content;
 	new->next = NULL;
+	return (new);
+}
+
+t_dl_list	*ft_dl_lstnew(void *content)
+{
+	t_dl_list	*new;
+
+	new = ft_calloc(1, sizeof (t_dl_list));
+	new->content = content;
+	new->next = NULL;
+	new->prev = NULL;
 	return (new);
 }
