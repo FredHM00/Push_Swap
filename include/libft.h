@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 16:25:58 by fpinheir          #+#    #+#             */
-/*   Updated: 2026/06/19 16:26:54 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/19 19:42:01 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,13 +58,14 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-int		ft_putchar(int num);
-int		ft_putstr(char *s);
-int		ft_putnbr(int nbr);
-int		ft_putunbr(unsigned long nbr, const char *base);
-int		ft_putptr(void *ptr);
+int		ft_putchar(int fd, int num);
+int		ft_putstr(int fd, char *s);
+int		ft_putnbr(int fd, int nbr);
+int		ft_putunbr(int fd, unsigned long nbr, const char *base);
+int		ft_putptr(int fd, void *ptr);
 
 int		ft_printf(const char *str, ...);
+int		ft_printf_fd(int fd, const char *str, ...);
 
 size_t	ft_strlen(const char *s);
 size_t	ft_strclen(const char *str, char c);
