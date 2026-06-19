@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:10 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/15 18:40:59 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/19 18:11:50 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 
 int		is_valid_number(int ac, char **av, t_config config);
 int		*parse_args(int ac, char **av, t_config config);
+int		parse_flags(int ac, char **av, t_config *config);
 int		check_str(const char *str);
 int		error(void);
 

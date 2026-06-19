@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_valid_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fmartins <fmartins@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/08 15:30:47 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/10 19:50:18 by fmartins         ###   ########.fr       */
+/*   Updated: 2026/06/19 17:42:49 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	error(void)
 {
 	ft_putendl_fd("Error", 2);
+	exit(EXIT_FAILURE);
 	return (0);
 }
 

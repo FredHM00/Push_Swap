@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 16:25:58 by fpinheir          #+#    #+#             */
-/*   Updated: 2026/06/17 15:33:17 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/19 16:26:54 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 /*
 The doubly linked counterpart to each function is in the same file
 as the simple linked list function.
-*/
 
 t_list	*ft_dl_lstnew(void *content);
 void	ft_dl_lstadd_front(t_list **lst, t_list *new);
@@ -108,5 +107,6 @@ void	ft_dl_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_dl_lstclear(t_list **lst, void (*del)(void*));
 void	ft_dl_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_dl_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+*/
 
 #endif
