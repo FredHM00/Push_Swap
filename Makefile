@@ -51,7 +51,7 @@ _STK=	stack_free.c \
 STK=$(patsubst %,$(STK_PATH)/%,$(_STK))
 
 SRC_PATH=src
-_SRC=	$(OPS) $(PRS) $(STK) 
+_SRC=	$(ALG) $(METRIC) $(OPS) $(PRS) $(STK) 
 
 SRC=$(patsubst %,$(SRC_PATH)/%,$(_SRC))
 
