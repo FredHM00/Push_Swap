@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:29 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/28 13:13:04 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/28 14:51:54 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,14 @@ int main(int argc, char **argv)
 	}
 	ft_printf("\n");
 	printf("Disorder: %f\n", compute_disorder(stack));
+	printf("ordered = %d\n", ordered(stack, stackb));
+	printf("partially ordered = %d\n", part_order(&stack, &stackb));
+	curr = stack;
+	while (curr)
+	{
+		ft_printf("%d\n", *(int *)(curr->content));
+		curr = curr->next;
+	}
 	simple_sort(&stack, &stackb, config);
 	curr = stack;
 	while (curr)
