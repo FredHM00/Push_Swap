@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:04 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/28 13:04:02 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/28 15:25:47 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,6 @@ typedef enum e_strategy
 	MEDIUM,
 	COMPLEX
 }t_strategy;
-
-
 
 typedef struct s_config
 {

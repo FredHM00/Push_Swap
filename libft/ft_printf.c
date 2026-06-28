@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 23:50:32 by fpinheir          #+#    #+#             */
-/*   Updated: 2026/06/19 19:48:38 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/28 15:25:13 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ static int	ft_format(int fd, const char *str_ptr, va_list *arg_ptr)
 	int			len;
 	const char	*hex = "0123456789abcdef";
 	const char	*big_hex = "0123456789ABCDEF";
+	const char	*dec = "0123456789";
 
 	len = 0;
 	if (*str_ptr == 'c')
@@ -38,7 +39,7 @@ static int	ft_format(int fd, const char *str_ptr, va_list *arg_ptr)
 	if ((*str_ptr == 'd') || (*str_ptr == 'i'))
 		len += ft_putnbr(fd, va_arg(*arg_ptr, int));
 	if (*str_ptr == 'u')
-		len += ft_putunbr(fd, (size_t)va_arg(*arg_ptr, unsigned int), "0123456789");
+		len += ft_putunbr(fd, (size_t)va_arg(*arg_ptr, unsigned int), dec);
 	if (*str_ptr == 'x')
 		len += ft_putunbr(fd, (size_t)va_arg(*arg_ptr, unsigned int), hex);
 	if (*str_ptr == 'X')
