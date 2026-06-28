@@ -6,16 +6,32 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:04 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/15 18:40:57 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/28 13:04:02 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BENCH_H
 # define BENCH_H
 # include "libft.h"
-# include <float.h>
+
+typedef enum e_move
+{
+	SA = 0,
+	SB,
+	SS,
+	RA,
+	RB,
+	RR,
+	RRA,
+	RRB,
+	RRR,
+	PA,
+	PB
+}t_move;
 
 float	compute_disorder(t_list	*list);
+void	print_move(t_move move);
+void	op_counter(t_move move);
 
 typedef enum e_strategy
 {
@@ -25,6 +41,8 @@ typedef enum e_strategy
 	MEDIUM,
 	COMPLEX
 }t_strategy;
+
+
 
 typedef struct s_config
 {

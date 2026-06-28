@@ -31,7 +31,8 @@ OPS_PATH=operations
 _OPS=	push.c \
 		reverse_rotate.c \
 		rotate.c \
-		swap.c
+		swap.c \
+		move_maker.c
 
 OPS=$(patsubst %,$(OPS_PATH)/%,$(_OPS))
 

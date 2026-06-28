@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:29 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/21 16:21:55 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/28 13:13:04 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,14 @@ int main(int argc, char **argv)
 {
 	int			*arr;
 	t_list		*stack;
+	t_list		*stackb;
 	t_list		*curr;
 	t_config	*config = malloc(sizeof (t_config));
 
 	parse_flags(argc, argv, config);
 	arr = parse_args(argc, argv, *config);
 	stack = stack_init(arr, argc - config->first_arg);
+	stackb = stack_init(arr, 0);
 	curr = stack;
 	while (curr)
 	{
@@ -31,7 +33,7 @@ int main(int argc, char **argv)
 	}
 	ft_printf("\n");
 	printf("Disorder: %f\n", compute_disorder(stack));
-	simple_sort(&stack);
+	simple_sort(&stack, &stackb, config);
 	curr = stack;
 	while (curr)
 	{
