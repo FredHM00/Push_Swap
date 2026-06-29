@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:54 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/28 12:08:17 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/29 16:03:31 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ void	print_move(t_move move)
 		write(1, "rrb\n", 4);
 	if (move == RRR)
 		write(1, "rrr\n", 4);
+	op_counter(move);
 }
