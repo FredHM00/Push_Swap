@@ -6,7 +6,7 @@
 /*   By: flora_nyah <flora_nyah@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/05 16:40:39 by fmartins          #+#    #+#             */
-/*   Updated: 2026/06/28 15:22:22 by flora_nyah       ###   ########.fr       */
+/*   Updated: 2026/06/28 18:56:43 by flora_nyah       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	simple_sort(t_list **a, t_list **b, t_config *config)
 	int			i;
 
 	rotate_sort(a, b, config);
-	while (compute_disorder(*a) != (float) 0)
+	while (ordered(*a, *b) == 0)
 	{
 		i = 1;
 		while (i++ < size)
@@ -49,6 +49,10 @@ void	simple_sort(t_list **a, t_list **b, t_config *config)
 				move_maker(a, b, config, SA);
 			move_maker(a, b, config, RA);
 			rotate_sort(a, b, config);
+			if (ordered(*a, *b))
+				return ;
 		}
+		move_maker(a, b, config, RA);
+		rotate_sort(a, b, config);
 	}
 }
